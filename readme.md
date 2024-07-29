@@ -144,4 +144,5 @@ This project is licensed under the MIT License.
 ## 📬 Contact
 
 - **Name**: Shay Marks
-- **Email**: nrexhd@gmail.come
+- **Email**: nrexhd@gmail.com
+- **LinkedIn**: https://www.linkedin.com/in/shay-marks-920546260/
