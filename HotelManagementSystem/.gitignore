@@ -1,0 +1,32 @@
+# Ignore user-specific files
+*.rsuser
+*.suo
+*.user
+*.userosscache
+
+# Ignore build output
+bin/
+obj/
+
+# Ignore Visual Studio Code settings
+.vscode/
+.vscode/*
+
+# Ignore Visual Studio settings and caches
+.vs/
+.vs/*
+
+# Ignore configuration files with sensitive information
+config.json
+
+# Ignore NuGet packages
+packages/
+*.nupkg
+*.snupkg
+.nuget/
+
+# Ignore publish output
+.publish/
+
+# Ignore logs
+*.log

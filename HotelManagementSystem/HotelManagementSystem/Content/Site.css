@@ -1,0 +1,309 @@
+﻿/* הגדרות כלליות ובסיסיות לאתר */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f9fa;
+    color: #343a40;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 15px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 20px 0;
+    font-weight: 700;
+    color: #373B44;
+}
+
+
+
+p {
+    margin: 0 0 10px;
+}
+
+a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+    a:hover {
+        color: #0056b3;
+        text-decoration: underline;
+    }
+
+/* עיצוב לכפתורים */
+button, .btn {
+    --b: 3px; /* border thickness */
+    --s: .45em; /* size of the corner */
+    --color: #373B44;
+    padding: calc(.5em + var(--s)) calc(.9em + var(--s));
+    color: var(--color);
+    --_p: var(--s);
+    background: conic-gradient(from 90deg at var(--b) var(--b),#0000 90deg,var(--color) 0) var(--_p) var(--_p)/calc(100% - var(--b) - 2*var(--_p)) calc(100% - var(--b) - 2*var(--_p));
+    transition: .3s linear, color 0s, background-color 0s;
+    outline: var(--b) solid #0000;
+    outline-offset: .6em;
+    font-size: 16px;
+    border: 0;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+}
+
+    button:hover,
+    button:focus-visible,
+    .btn:hover,
+    .btn:focus-visible {
+        --_p: 0px;
+        outline-color: var(--color);
+        outline-offset: .05em;
+    }
+
+    button:active,
+    .btn:active {
+        background: var(--color);
+        color: #fff;
+    }
+
+/* Header והניווט העליון */
+header {
+    background: #343a40;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+}
+
+    header h1 {
+        margin: 0;
+        padding: 0;
+        font-size: 2em;
+    }
+
+nav {
+    background: #007bff;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+}
+
+    nav a {
+        color: #fff;
+        padding: 10px 20px;
+        display: inline-block;
+    }
+
+        nav a:hover {
+            background: #0056b3;
+            color: #fff;
+        }
+
+/* Footer */
+footer {
+    background: #343a40;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+    footer a {
+        color: #fff;
+        margin: 0 10px;
+        text-decoration: none;
+    }
+
+        footer a:hover {
+            color: #007bff;
+        }
+/* כרטיסיות (Cards) */
+.card {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    transition: box-shadow 0.3s ease-in-out;
+    background-color: #fff;
+}
+
+    .card:hover {
+        box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
+
+.card-header {
+    background: #007bff; /* שינוי צבע רקע לכותרת */
+    color: #fff;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.card-body {
+    padding: 20px;
+    color: #343a40; /* צבע טקסט לכרטיסייה */
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-label {
+    margin-bottom: 5px;
+    font-weight: 600;
+    color: #373B44;
+}
+
+.form-control {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 10px;
+    width: 100%;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+    .form-control:focus {
+        border-color: #007bff;
+        box-shadow: 0 0 5px rgba(0,123,255,0.5);
+    }
+
+/* טבלאות */
+.table {
+    width: 100%;
+    margin-bottom: 1rem;
+    color: #212529;
+    border-collapse: collapse;
+}
+
+    .table th,
+    .table td {
+        padding: 0.75rem;
+        vertical-align: top;
+        border: 1px solid #dee2e6;
+        transition: background-color 0.3s;
+    }
+
+    .table thead th {
+        vertical-align: bottom;
+        border-bottom: 2px solid #dee2e6;
+        background-color: #373B44;
+        color: #fff;
+    }
+
+    .table tbody tr:hover {
+        background-color: #f8f9fa;
+    }
+
+/* הודעות והתרעות */
+.alert {
+    padding: 15px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    transition: background-color 0.3s;
+}
+
+.alert-success {
+    color: #155724;
+    background-color: #d4edda;
+    border-color: #c3e6cb;
+}
+
+.alert-danger {
+    color: #721c24;
+    background-color: #f8d7da;
+    border-color: #f5c6cb;
+}
+
+.alert-warning {
+    color: #856404;
+    background-color: #fff3cd;
+    border-color: #ffeeba;
+}
+
+.alert-info {
+    color: #0c5460;
+    background-color: #d1ecf1;
+    border-color: #bee5eb;
+}
+
+/* אנימציות ואפקטים מיוחדים */
+.fade-in {
+    animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.hover-shadow:hover {
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+.smooth-transition {
+    transition: all 0.3s ease-in-out;
+}
+/* לדף הבית */
+.jumbotron {
+    background-color: #007bff;
+    color: #fff;
+    padding: 2rem 1rem;
+    border-radius: 0.3rem;
+    text-align: center;
+}
+
+.navbar.fixed-top {
+    margin-bottom: 2rem;
+}
+
+.carousel-inner {
+    max-width: 800px; /* הגבלת רוחב מקסימלי לתמונות הגדולות */
+    margin: 0 auto; /* מרכז את הקרוסלה */
+}
+
+    .carousel-inner img {
+        width: 100%;
+        height: auto;
+        border-radius: 5px;
+    }
+
+.navbar-nav.ml-auto {
+    margin-left: auto;
+}
+
+.carousel-indicators {
+    position: static;
+    margin-top: 20px;
+}
+
+    .carousel-indicators li {
+        width: 60px;
+        height: 60px;
+        background-color: transparent;
+    }
+
+    .carousel-indicators img {
+        width: 100%;
+        height: auto;
+        border: 2px solid #ddd;
+        border-radius: 5px;
+    }
+
+    .carousel-indicators .active img {
+        border-color: #007bff;
+    }
+
+/* הגדרת צבע ושיידו לחצים בקרוסלה */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: black; /* צבע החצים */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* שיידו לחצים */
+}
